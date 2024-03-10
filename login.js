@@ -1,7 +1,7 @@
 // Define user credentials
 var users = [
-    { username: 'admin', password: '5nlz7h3BiTWZ3x399ot8nYqGxHpys7Np' },
-    { username: 'user2', password: 'password2' },
+    { username: 'admin', password: 'KEY-5nlz7h3BiTWZ3x399ot8nYqGxHpys7Np' },
+    { username: 'schoolkids', password: 'KEY-FREE' },
     { username: 'user3', password: 'password3' }
   ];
   
