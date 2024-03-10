@@ -1,25 +1,25 @@
-:root {
-	--color-hue: 130 !important;
-	--color-saturation: 76% !important;
-	--dark-background: hsl(0, 70%, 15%);
-}
-
-.circles li img {
-	top: -50%;
-	left: -10%;
-}
-.circles li {
-	background: hsla(0, 100%, 50%, 0.5);
-}
-@keyframes animate {
-	0% {
-		transform: translateY(0) rotate(0deg);
-		opacity: 1;
-		border-radius: 100%;
+body {
+	background-color: #000;
+  }
+  
+  .rain {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+	background-size: 1px 1px;
+	animation: rain 1s linear infinite;
+  }
+  
+  @keyframes rain {
+	from {
+	  background-position: 0 0;
 	}
-	100% {
-		transform: translateY(-1000px) rotate(720deg);
-		opacity: 0;
-		border-radius: 100%;
+	
+	to {
+	  background-position: 0 100%;
 	}
-}
+  }

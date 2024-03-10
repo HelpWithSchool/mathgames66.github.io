@@ -19,16 +19,23 @@ var users = [
   
     if (authenticatedUser) {
       alert('Login successful');
-     
-      const w = window.open("about:blank"); // Open a new window
-
-      w.document.open(); // Open the document of the new window
-      w.document.write("<html><body></body></html>"); // Write the basic HTML structure to the document
-      w.document.close(); // Close the document of the new window
       
-      // Load the file "games.html" into the new window
-      w.location.href = "games.html";
- 
+      var win = window.open();
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = 'https://gummysbear.vercel.app/games.html';
+      win.document.body.appendChild(iframe);
+      
+      function myFunction() {
+          location.replace("https://www.bing.com/")
+      }
+        
+      window.close();
 
     } else {
       alert('Invalid username or password');
