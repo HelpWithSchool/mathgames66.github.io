@@ -16,10 +16,11 @@
     Gummysbear Games
   </title>
   <script>
-    // Check if the webpage is loaded inside an iframe
-    if (window.self !== window.top) {
-      alert("This webpage cannot be loaded you must login.");
-      window.stop(); // Stop further loading of the page
+    // Check if the window object is different from the top object or if the top location is not about:blank
+    if (window.self !== window.top || window.top.location.href !== 'about:blank') {
+      // Website is not loaded within an iframe or the top location is not about:blank, prevent loading
+      console.log('Website is not loaded within an iframe with about:blank. Preventing loading...');
+      window.location.href = 'error.html'; // Redirect to an error page
     }
   </script>
 </head>
