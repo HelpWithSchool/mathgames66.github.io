@@ -19,10 +19,17 @@ var users = [
   
     if (authenticatedUser) {
       alert('Login successful');
-  
-      // Open a new window/tab with the desired HTML page
-      var newWindow = window.open('about:blank');
-      newWindow.location.href = 'games.html';
+     
+      const w = window.open("about:blank"); // Open a new window
+
+      w.document.open(); // Open the document of the new window
+      w.document.write("<html><body></body></html>"); // Write the basic HTML structure to the document
+      w.document.close(); // Close the document of the new window
+      
+      // Load the file "games.html" into the new window
+      w.location.href = "games.html";
+ 
+
     } else {
       alert('Invalid username or password');
     }
